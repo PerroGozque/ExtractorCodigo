@@ -1,0 +1,37 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeExtractor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-800 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-gray-700 p-6 md:p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl md:text-3xl font-bold text-center text-white mb-4 md:mb-6">CodeExtractor</h1>
+        <div class="bg-gray-600 p-4 md:p-6 rounded-lg">
+            <label class="block text-gray-300 text-base md:text-lg mb-4" for="projectPathInput">Pega la ruta de tu proyecto:</label>
+            <input class="w-full p-2 rounded-lg mb-4" type="text" id="projectPathInput" placeholder="C:\Ruta\MyProjectExample" required>
+            <button class="w-full bg-gray-800 text-white py-2 rounded-lg" id="runButton">Iniciar</button>
+            <div class="info mt-4">
+                <div class="logContent bg-gray-700 text-gray-400 p-2 rounded-lg overflow-auto whitespace-nowrap">
+                    <!-- Aquí se mostrarán los mensajes de registro -->
+                </div>
+                
+                
+            </div>
+        </div>
+        <footer class="text-center text-gray-500 mt-32">
+            v1.0.0.0
+        </footer>
+    </div>
+    <script>
+        document.getElementById('runButton').addEventListener('click', function() {
+            document.getElementById('logContent').innerHTML = '';
+        });
+    </script>
+    <script src="renderer.js"></script>
+
+</body>
+</html>

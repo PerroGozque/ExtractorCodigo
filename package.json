@@ -1,0 +1,25 @@
+{
+  "name": "codeextractor",
+  "version": "1.0.0",
+  "description": "Aplicación para extraer y consolidar el código de un proyecto en un archivo de texto.",
+  "main": "src/main.js",
+  "build": {
+    "appId": "com.example.myapp",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . MyApp --platform=win32 --arch=x64 --out=dist --overwrite",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Tu Nombre",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.0.1",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  }
+}
